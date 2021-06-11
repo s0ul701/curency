@@ -1,0 +1,13 @@
+syntax = 'proto2';
+package curency;
+
+message DollarCurency {
+    required double rubles = 1;
+}
+
+message EmptyInput {}
+
+
+service DollarCurencyService {
+    rpc GetDollarRate(EmptyInput) returns (DollarCurency);
+}
